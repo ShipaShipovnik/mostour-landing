@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -8,12 +7,6 @@
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   box-sizing: border-box;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  height: 100%;
 }
 
 .text-light {
@@ -50,7 +43,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ШАПКА */
+h1 {
+  font-size: 36px;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.burger-menu {
+  display: none;
+}
+
 header {
   background-color: #201917;
   height: 80px;
@@ -114,12 +120,14 @@ header .container .header__menu a {
   padding: 28px 0 84px 0;
 }
 .popular .popular__tour-line {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
   gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .popular .popular__tour-line .tour {
   height: 100%;
+  width: 328px;
 }
 .popular .popular__tour-line .tour .tour-image {
   width: 100%;
@@ -129,9 +137,6 @@ header .container .header__menu a {
 .popular .popular__tour-line .tour .tour-image img {
   width: 100%;
   height: 100%;
-}
-.popular .popular__tour-line .tour .tour__name {
-  margin: 5px 0;
 }
 .popular .popular__tour-line .tour .tour__name {
   margin: 5px 0;
@@ -165,7 +170,6 @@ header .container .header__menu a {
   width: 250px;
 }
 .about-tours .about__facts-line .fact .fact__icon {
-  background-color: #e9dabe;
   width: 155px;
   height: 155px;
   border-radius: 100%;
@@ -187,9 +191,6 @@ header .container .header__menu a {
   gap: 50px;
   align-items: center;
   height: 356px;
-}
-.askform .askform__block form {
-  width: 60%;
 }
 .askform .askform__block form input,
 .askform .askform__block form button {
@@ -225,4 +226,126 @@ header .container .header__menu a {
   height: 310px;
   background-color: black;
   color: #e9dabe;
+  padding: 64px 0px;
+}
+.footer .footer-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "Socials Contact" "Copy Contact";
+}
+.footer .footer-grid .footer__socials {
+  grid-area: Socials;
+  align-self: self-start;
+}
+.footer .footer-grid .footer__contacts {
+  grid-area: Contact;
+  text-align: right;
+  font-size: 20px;
+}
+.footer .footer-grid .footer__copyright {
+  grid-area: Copy;
+  text-align: left;
+  align-self: self-end;
+  font-size: 20px;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    width: 1020px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 650px;
+  }
+  .burger-menu {
+    display: block;
+  }
+  header .container {
+    justify-items: start;
+  }
+  .header__menu li {
+    display: none;
+  }
+  .banner {
+    height: 600px;
+  }
+  .banner .banner__text {
+    width: 70%;
+  }
+  .banner .banner__text h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .banner .banner__text p {
+    font-size: 20px;
+  }
+  .popular .popular__tour-line {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .popular .popular__tour-line .tour {
+    height: 460px;
+    max-width: 320px;
+  }
+  .popular .popular__tour-line .tour .tour__learnmore-btn {
+    height: 45px;
+  }
+  .about-tours {
+    height: auto;
+  }
+  .about-tours .container {
+    padding: 60px 0 84px 0;
+  }
+  .about-tours .about__facts-line {
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+  }
+  .askform {
+    height: auto;
+    padding: 77px 0;
+  }
+  .askform .askform__block {
+    background-color: #201917;
+    padding: 47px 68px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 50px;
+    align-items: center;
+    height: auto;
+  }
+  .askform .askform__block form input,
+  .askform .askform__block form button {
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .askform .askform__block form input {
+    background-color: white;
+    color: #201917;
+  }
+  .askform .askform__block form button {
+    background-color: black;
+    color: white;
+  }
+  .askform .askform__block .form__text {
+    color: #e9dabe;
+    font-size: large;
+    text-align: center;
+  }
+  .askform .askform__block .form__text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .askform .askform__block .form__text p {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

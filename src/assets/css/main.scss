@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+// БАЗОВЫЕ НЕИЗМЕНЯЕМЫЕ СТИЛИ
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +8,6 @@
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   box-sizing: border-box;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  // outline: 1px rgb(163, 163, 163) solid;
 }
 
 $pale: #e9dabe;
@@ -52,7 +45,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ШАПКА */
+h1 {
+  font-size: 36px;
+}
+
+//==========================================================ДЕСКТОП 1440px
+
+// Контенйер
+.container {
+  width: 1020px;
+  margin: 0 auto;
+  height: 100%;
+  // outline: 1px rgb(163, 163, 163) solid;
+}
+
+// -------------------------ШАПКА
+.burger-menu {
+  display: none;
+}
 header {
   background-color: #201917;
   height: 80px;
@@ -90,7 +100,7 @@ header {
   }
 }
 
-// БАННЕР=========================
+// -------------------------БАННЕР
 .banner {
   height: 763px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -113,38 +123,29 @@ header {
     }
   }
 }
-//ПОПУЛЯРНЫЕ=========================
+
+// -------------------------ПОПУЛЯРНЫЕ
 .popular {
   background-color: $pale;
   .container {
     padding: 28px 0 84px 0;
   }
   .popular__tour-line {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    // grid-auto-rows: 1;
+    display: flex;
     gap: 10px;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
     .tour {
-      // display: grid;
-      // grid-template-rows: 200px auto auto 50px;
       height: 100%;
+      width: 328px;
       .tour-image {
         width: 100%;
         background-color: #acacac;
-        // background-image: url(../media/scale_1200.jpg);
-        // background-size: cover;
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // background-size: cover;
         height: 250px;
         img {
           width: 100%;
           height: 100%;
         }
-      }
-      .tour__name {
-        margin: 5px 0;
       }
       .tour__name {
         margin: 5px 0;
@@ -160,7 +161,7 @@ header {
     }
   }
 }
-
+// -------------------------ОБ ЭКСКУРСИЯХ
 .about-tours {
   background-color: #201917;
   color: $pale;
@@ -182,7 +183,7 @@ header {
       height: 325px;
       width: 250px;
       .fact__icon {
-        background-color: $pale;
+        // background-color: $pale;
         width: 155px;
         height: 155px;
         border-radius: 100%;
@@ -195,6 +196,7 @@ header {
   }
 }
 
+// -------------------------ОБРАТНАЯ СВЯЗЬ
 .askform {
   height: 500px;
   background-color: $pale;
@@ -207,7 +209,6 @@ header {
     align-items: center;
     height: 356px;
     form {
-      width: 60%;
       input,
       button {
         border: none;
@@ -241,8 +242,153 @@ header {
   }
 }
 
+// --------------------------ПОДВАЛ
 .footer {
   height: 310px;
   background-color: black;
   color: $pale;
+  padding: 64px 0px;
+  .footer-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    // row-gap: 36px;
+    grid-template-areas:
+      "Socials Contact"
+      "Copy Contact";
+    .footer__socials {
+      grid-area: Socials;
+      align-self: self-start;
+    }
+    .footer__contacts {
+      grid-area: Contact;
+      text-align: right;
+      font-size: 20px;
+    }
+    .footer__copyright {
+      grid-area: Copy;
+      text-align: left;
+      align-self: self-end;
+      font-size: 20px;
+    }
+  }
+}
+
+//================================================================ДЕСКТОП 1240
+@media (max-width: 1240px) {
+  .container {
+    width: 1020px;
+  }
+}
+
+//================================================================ДЕСКТОП 767
+@media (max-width: 767px) {
+  .container {
+    width: 650px;
+  }
+
+  // -------------------------ХЕДЕР
+  .burger-menu {
+    display: block;
+  }
+  header .container {
+    justify-items: start;
+  }
+
+  .header__menu li {
+    display: none;
+  }
+
+  // -------------------------БАННЕР
+  .banner {
+    height: 600px;
+
+    .banner__text {
+      width: 70%;
+      h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  // -------------------------ПОПУЛЯРНЫЕ
+  .popular {
+    .popular__tour-line {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      .tour {
+        height: 460px;
+        max-width: 320px;
+        .tour__learnmore-btn {
+          height: 45px;
+        }
+      }
+    }
+  }
+
+  // -------------------------ОБ ЭКСКУРСИЯХ
+  .about-tours {
+    height: auto;
+    .container {
+      padding: 60px 0 84px 0;
+    }
+    .about__facts-line {
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: space-around;
+    }
+  }
+
+  // -------------------------ОБРАТНАЯ СВЯЗЬ
+  .askform {
+    height: auto;
+    padding: 77px 0;
+    .askform__block {
+      background-color: #201917;
+      padding: 47px 68px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      gap: 50px;
+      align-items: center;
+      height: auto;
+      form {
+        input,
+        button {
+          border: none;
+          width: 100%;
+          margin-bottom: 10px;
+          height: 50px;
+          text-align: center;
+          font-size: 24px;
+        }
+        input {
+          background-color: white;
+          color: #201917;
+        }
+        button {
+          background-color: black;
+          color: white;
+        }
+      }
+      .form__text {
+        color: $pale;
+        font-size: large;
+        text-align: center;
+        h1 {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
