@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(
+      content="width=device-width, initial-scale=1.0" 
+      name="viewport"
+    )
+    link(
+      href="./assets/css/main.css" 
+      rel="stylesheet"
+    )
+    title МОСЭКСКУРС
+  body
+    include ./components/header.pug
+    .wrapper
+      block content
+    include ./components/footer.pug
+  script.

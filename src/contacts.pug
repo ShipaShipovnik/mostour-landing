@@ -1,0 +1,23 @@
+extends ./route-pages-base.pug
+
+block title 
+    h1.white-text Контакты
+
+block content
+    section.contacts
+        .container
+            .contacts-text
+                p.warn-black 
+                    <b>По проблемам связаными с оплатой или вопросами по экскурсиям обращайтесь через форму поддержки!</b>
+                p.italic 
+                    <i>519485, Москва, наб. Балканская, дом 19, оффис 2 <br>+ 8 (234) 834 88 33 <br>example@yandex.ru<br>example@gmail.com</i>
+                h2.h2-sections Мы в соц сетях
+                .contatcs__socials
+                    a(href="")
+                        include .\assets\media\socials-ok.svg
+                    a(href="")
+                        include .\assets\media\socials-tg.svg
+                    a(href="")
+                        include .\assets\media\socials-vk.svg
+
+

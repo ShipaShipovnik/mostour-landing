@@ -1,0 +1,50 @@
+extends ./route-pages-base.pug
+
+block title 
+    h1.white-text Видео
+
+block content
+    section.videos
+        .container
+            .main-player 
+                video#my-player.video-js(controls='' preload='auto' poster='//vjs.zencdn.net/v/oceans.png' data-setup='{}')
+                    source(src='//vjs.zencdn.net/v/oceans.mp4' type='video/mp4')
+                    source(src='//vjs.zencdn.net/v/oceans.webm' type='video/webm')
+                    source(src='//vjs.zencdn.net/v/oceans.ogv' type='video/ogg')
+                    p.vjs-no-js
+                        | To view this video please enable JavaScript, and consider upgrading to a
+                        | web browser that
+                        a(href='https://videojs.com/html5-video-support/' target='_blank')
+                            | supports HTML5 video
+            .other-videos
+                .video-card 
+                    .video__prewiev 
+                        a(href="") 
+                            img(src="./assets/media/tour2.jpg", alt="")
+                    .video__title
+                        a(href="") 
+                            p Обзор экскурсии в Бункер Сталина
+                .video-card 
+                    .video__prewiev 
+                        a(href="") 
+                            img(src="./assets/media/tour2.jpg", alt="")
+                    .video__title
+                        a(href="") 
+                            p Обзор экскурсии в Бункер Сталина
+                .video-card 
+                    .video__prewiev 
+                        a(href="") 
+                            img(src="./assets/media/tour2.jpg", alt="")
+                    .video__title
+                        a(href="") 
+                            p Обзор экскурсии в Бункер Сталина
+                .video-card 
+                    .video__prewiev 
+                        a(href="") 
+                            img(src="./assets/media/tour2.jpg", alt="")
+                    .video__title
+                        a(href="") 
+                            p Обзор экскурсии в Бункер Сталина
+                
+
+

@@ -1,0 +1,115 @@
+extends main-base.pug 
+
+block content
+  section.banner
+    .container
+      div(class="banner__text")
+        h1.text-white Мы любим Москву и хотим чтобы вы открывали её вместе с нами!
+        p.text-white Погрузитесь в историю нашей замечательной столицы!
+  section.popular
+    .container
+      h1.header1 Популярные экскурсии
+      div(class="popular__tour-line")
+        .tour
+          .tour-image
+            img(
+              alt="tour1" 
+              src="../src/assets/media/tour1.jpg"
+              )
+          h2(class="tour__name") Бункер Сталина
+          p(class="tour__descr")
+            | Это исторически значимое путешествие, которое подарит вам и
+            |   вашим спутникам возможность узнать больше о Сталине и его вкладе
+            |   в события XX века.
+          button(class="tour__learnmore-btn") Узнать больше....
+        .tour
+          .tour-image
+            img(
+              alt="" 
+              src="../src/assets/media/tour2.jpg"
+              )
+          h2(class="tour__name") Кремль
+          p(class="tour__descr")
+            | Это исторически значимое путешествие, которое подарит вам и
+            |   вашим спутникам возможность узнать больше о Сталине и его вкладе
+            |   в события XX века.
+          button(class="tour__learnmore-btn") Узнать больше....
+        .tour
+          .tour-image
+            img(
+              alt="" 
+              src="../src/assets/media/tour3.jpg"
+              )
+          h2(class="tour__name") Прогулка на пароме
+          p(class="tour__descr")
+            | Это исторически значимое путешествие, которое подарит вам и
+            |   вашим спутникам возможность узнать больше о Сталине и его вкладе
+            |   в события XX века.
+          button(class="tour__learnmore-btn") Узнать больше....
+  section.about-tours
+    .container
+      h1.header1 Об экскурсиях
+      div(class="about__facts-line")
+        .fact
+          div(class="fact__icon")
+            img(
+              alt="a" 
+              src="/src/assets/media/fact1.svg"
+              )
+          h2(class="fact__name") Широкий выбор
+          p(class="fact__descr")
+            | Большое количество различных экскурсий - от Кремля, до самых
+            |   малоизвестных глубинок Москвы.
+        .fact
+          div(class="fact__icon")
+            img(
+              alt="a" 
+              src="/src/assets/media/fact2.svg"
+              )
+          h2(class="fact__name") Широкий выбор
+          p(class="fact__descr")
+            | Большое количество различных экскурсий - от Кремля, до самых
+            |   малоизвестных глубинок Москвы.
+        .fact
+          div(class="fact__icon")
+            img(
+              alt="a" 
+              src="/src/assets/media/fact3.svg"
+              )
+          h2(class="fact__name") Широкий выбор
+          p(class="fact__descr")
+            | Большое количество различных экскурсий - от Кремля, до самых
+            |   малоизвестных глубинок Москвы.
+        .fact
+          div(class="fact__icon")
+            img(
+              alt="a" 
+              src="/src/assets/media/fact4.svg"
+              )
+          h2(class="fact__name") Широкий выбор
+          p(class="fact__descr")
+            | Большое количество различных экскурсий - от Кремля, до самых
+            |   малоизвестных глубинок Москвы.
+  section.askform
+    .container
+      div(class="askform__block")
+        form(action="")
+          input(
+            placeholder="ФИО" 
+            type="text"
+            )
+          input(
+            placeholder="Почта" 
+            type="email"
+            )
+          input(
+            placeholder="Телефон" 
+            type="phone"
+            )
+          button Отправить
+        div(class="form__text")
+          h1
+            | Остались вопросы?
+            br
+            | Свяжитесь с нами!
+          p Мы свяжемся с вами по почте или телефону и ответим на вопросы.

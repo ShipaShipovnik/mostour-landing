@@ -1,0 +1,28 @@
+extends ./route-pages-base.pug
+block title 
+    h1.white-text Обратная связь
+
+block content
+    section.askform
+        .container
+            div(class="askform__block")
+                form(action="")
+                    input(
+                        placeholder="ФИО" 
+                        type="text"
+                        )
+                    input(
+                        placeholder="Почта" 
+                        type="email"
+                        )
+                    input(
+                        placeholder="Телефон" 
+                        type="phone"
+                        )
+                    button Отправить
+                div(class="form__text")
+                    h1
+                        | Остались вопросы?
+                        br
+                        | Свяжитесь с нами!
+                    p Мы свяжемся с вами по почте или телефону и ответим на вопросы.
